@@ -1,0 +1,8 @@
+<launch>
+  <arg name="port" default="/dev/ttyUSB0" />
+  <arg name="baud" default="115200" />
+  <node pkg="simple_bgc" type="simple_bgc_node" name="gimbal" output="screen">
+    <param name="port" value="$(arg port)" />
+    <param name="baud" value="$(arg baud)" />
+  </node>
+</launch>
